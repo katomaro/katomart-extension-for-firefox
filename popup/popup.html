@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Katomart Helper for Firefox</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <!-- Tela de Termos de Uso -->
+    <div id="terms-of-use" style="display: none;">
+        <h2>Termos de Uso</h2>
+        <p>Por favor, leia e aceite os termos de uso para continuar usando a extensão.</p>
+        <button id="accept-terms">Aceitar</button>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <div id="main-content" style="display: none;">
+        <div id="sidebar">
+            <h3>Como Usar</h3>
+            <p>Informações sobre como usar a extensão.</p>
+        </div>
+        <div id="container">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="pt">Português</option>
+            </select>
+            <button id="katomartize-button">Katomartizar</button>
+            <div id="login-status">Status de login: Não detectado</div>
+            <div id="token-info">
+                <h3>Token:</h3>
+                <p id="token-value">Aguardando token...</p>
+                <p id="token-duration">Duração: Aguardando...</p>
+            </div>
+            <h3>Cookies:</h3>
+            <table id="cookies-table">
+                <tr>
+                    <th>Nome do Cookie</th>
+                    <th>Valor do Cookie</th>
+                </tr>
+            </table>
+            <h3>Requisições:</h3>
+            <ul id="requests-list"></ul>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

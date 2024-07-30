@@ -1,0 +1,11 @@
+{
+    "tosMessage": {
+        "message": "Por favor, leia e concorde com os Termos de Serviço para usar esta extensão."
+    },
+    "agreeButtonText": {
+        "message": "Eu Concordo"
+    },
+    "welcomeText": {
+        "message": "Bem-vindo à extensão!"
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "tosMessage": {
+        "message": "Please read and agree to the Terms of Service to use this extension."
+    },
+    "agreeButtonText": {
+        "message": "I Agree"
+    },
+    "welcomeText": {
+        "message": "Welcome to the extension!"
+    }
+}

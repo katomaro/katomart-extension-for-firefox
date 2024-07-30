@@ -1,0 +1,70 @@
+/* popup.css */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#language-selector {
+    float: right;
+    margin-bottom: 10px;
+}
+
+#katomartize-button {
+    float: left;
+    margin-bottom: 10px;
+}
+
+#login-status {
+    clear: both;
+    margin-top: 20px;
+}
+
+
+#main-content {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+}
+
+#sidebar {
+    flex: 1;
+    max-width: 300px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+#container {
+    flex: 3;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Estilos adicionais para aprimorar a responsividade */
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+    }
+    #sidebar {
+        max-width: none;
+        width: 100%;
+    }
+    #container {
+        order: 2;
+    }
+}
