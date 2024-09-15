@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Katomart Helper for Firefox</title>
-    <link rel="stylesheet" type="text/css" href="popup.css">
-</head>
-<body>
-    <!-- Tela de Termos de Uso -->
-    <div id="terms-of-use" style="display: none;">
-        <h2>Termos de Uso</h2>
-        <p>Por favor, leia e aceite os termos de uso para continuar usando a extensão.</p>
-        <button id="accept-terms">Aceitar</button>
-    </div>
-
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+  </head>
+  <body>
     <!-- Conteúdo Principal -->
-    <div id="main-content" style="display: none;">
-        <div id="sidebar">
-            <h3>Como Usar</h3>
-            <p>Informações sobre como usar a extensão.</p>
+    <div id="main-content">
+      <div id="sidebar">
+        <h3>Como Usar</h3>
+        <p style="padding: 0; margin: 0">
+          Informações sobre como usar a extensão.
+        </p>
+        <div id="sidebar-container">
+          <button id="delete-session">
+            DELETAR SESSÃO
+            <img src="../icons/delete.png" style="width: 20px" />
+          </button>
+          <button id="send-data">
+            ENVIAR DADOS
+            <img src="../icons/upload.png" style="width: 30px" />
+          </button>
         </div>
-        <div id="container">
-            <select id="language-selector">
-                <option value="en">English</option>
-                <option value="pt">Português</option>
-            </select>
-            <button id="katomartize-button">Katomartizar</button>
-            <div id="login-status">Status de login: Não detectado</div>
-            <div id="token-info">
-                <h3>Token:</h3>
-                <p id="token-value">Aguardando token...</p>
-                <p id="token-duration">Duração: Aguardando...</p>
-            </div>
-            <h3>Cookies:</h3>
-            <table id="cookies-table">
-                <tr>
-                    <th>Nome do Cookie</th>
-                    <th>Valor do Cookie</th>
-                </tr>
-            </table>
-            <h3>Requisições:</h3>
-            <ul id="requests-list"></ul>
+      </div>
+      <div id="container">
+        <div id="container-buttons">
+          <button id="katomartize-button">KATOMARTIZAR</button>
+          <select id="language-selector">
+            <option value="en">English</option>
+            <option value="pt">Português</option>
+          </select>
         </div>
+        <div id="login-status">
+          <h3>Status:</h3>
+          <span id="suported_website"
+            >Site suportado pelo katomart:
+            <img style="width: 20px" src="../icons/accept.png" />
+          </span>
+          <span id="login_website"
+            >Login capturado: <strong id="login_value"></strong
+          ></span>
+          <span id="already_on_katomart"
+            >Login já presente no katomart:
+            <strong id="already_on_katomart_value"></strong
+          ></span>
+        </div>
+        <div id="token-info">
+          <h3>Token:</h3>
+          <span id="token-value">Aguardando token...</span>
+          <span id="token-duration">Duração: Aguardando...</span>
+        </div>
+        <div id="cookies-info">
+          <h3>Cookies:</h3>
+          <table id="cookies-table">
+            <tr>
+              <th>Nome do Cookie</th>
+              <th>Valor do Cookie</th>
+            </tr>
+          </table>
+        </div>
+        <div id="requests-info">
+          <h3>Requisições:</h3>
+          <ul id="requests-list"></ul>
+        </div>
+      </div>
     </div>
-
+    <footer>
+      <span><a href="" target="_blank">Termos de uso</a></span>
+    </footer>
     <script src="popup.js"></script>
-</body>
+  </body>
 </html>
